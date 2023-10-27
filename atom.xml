@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>zzk blog</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://collapsarva.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://collapsarva.github.io/"/>
   <updated>2023-10-25T15:50:53.638Z</updated>
-  <id>http://example.com/</id>
+  <id>https://collapsarva.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>zzk</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo的搭建以及bug合集</title>
-    <link href="http://example.com/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/"/>
-    <id>http://example.com/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/</id>
+    <link href="https://collapsarva.github.io/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/"/>
+    <id>https://collapsarva.github.io/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/</id>
     <published>2023-10-25T08:16:31.000Z</published>
     <updated>2023-10-25T15:50:53.638Z</updated>
     
@@ -33,21 +33,21 @@
     
     
     
-    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://collapsarva.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    <category term="hexo" scheme="https://collapsarva.github.io/tags/hexo/"/>
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://collapsarva.github.io/tags/github/"/>
     
-    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    <category term="blog" scheme="https://collapsarva.github.io/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/10/24/hello-world/"/>
-    <id>http://example.com/2023/10/24/hello-world/</id>
+    <link href="https://collapsarva.github.io/2023/10/24/hello-world/"/>
+    <id>https://collapsarva.github.io/2023/10/24/hello-world/</id>
     <published>2023-10-24T14:07:28.834Z</published>
     <updated>2023-10-24T14:07:28.834Z</updated>
     
