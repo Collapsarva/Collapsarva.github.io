@@ -16,27 +16,19 @@
   <meta name="author" content="zzk">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.使用hexo、github来搭建个人博客搭建流程主要参考以下文章（流程非常详细） 2021最全hexo搭建博客+matery美化+使用（保姆级教程）链接1  2.遇到的一些bug及解决方法（下列步骤均指上述文章）a.步骤4.2的最后一步，无法通过域名（xxxx.github.io）访问到博客页面，出现如下问题： 这是由于在github上创建仓库时的命名必须是你github的用户名，不能随意其一">
-<meta property="og:type" content="article">
-<meta property="og:title" content="hexo的搭建以及bug合集">
-<meta property="og:url" content="https://collapsarva.github.io/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Yolov4算法部署及环境搭建（服务器上）">
+<meta property="og:url" content="https://collapsarva.github.io/2023/10/27/Yolov4%E7%AE%97%E6%B3%95%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%EF%BC%89/index.html">
 <meta property="og:site_name" content="zzk blog">
-<meta property="og:description" content="1.使用hexo、github来搭建个人博客搭建流程主要参考以下文章（流程非常详细） 2021最全hexo搭建博客+matery美化+使用（保姆级教程）链接1  2.遇到的一些bug及解决方法（下列步骤均指上述文章）a.步骤4.2的最后一步，无法通过域名（xxxx.github.io）访问到博客页面，出现如下问题： 这是由于在github上创建仓库时的命名必须是你github的用户名，不能随意其一">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://collapsarva.github.io/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/1.png">
-<meta property="og:image" content="https://collapsarva.github.io/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/2.jpg">
-<meta property="article:published_time" content="2023-10-25T08:16:31.000Z">
-<meta property="article:modified_time" content="2023-10-25T15:50:53.638Z">
+<meta property="article:published_time" content="2023-10-27T15:27:26.000Z">
+<meta property="article:modified_time" content="2023-10-27T15:27:26.320Z">
 <meta property="article:author" content="zzk">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="github">
-<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://collapsarva.github.io/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/1.png">
   
   
   
-  <title>hexo的搭建以及bug合集 - zzk blog</title>
+  <title>Yolov4算法部署及环境搭建（服务器上） - zzk blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +195,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="hexo的搭建以及bug合集"></span>
+            <span id="subtitle" data-typed-text="Yolov4算法部署及环境搭建（服务器上）"></span>
           
         </div>
 
@@ -214,8 +206,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-25 16:16" pubdate>
-          October 25, 2023 pm
+        <time datetime="2023-10-27 23:27" pubdate>
+          October 27, 2023 pm
         </time>
       </span>
     
@@ -226,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          981 words
+          0 words
         
       </span>
     
@@ -237,7 +229,7 @@
         
         
         
-          9 mins
+          1 mins
         
       </span>
     
@@ -274,46 +266,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">hexo的搭建以及bug合集</h1>
+            <h1 id="seo-header">Yolov4算法部署及环境搭建（服务器上）</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="1-使用hexo、github来搭建个人博客"><a href="#1-使用hexo、github来搭建个人博客" class="headerlink" title="1.使用hexo、github来搭建个人博客"></a>1.使用hexo、github来搭建个人博客</h1><p>搭建流程主要参考以下文章（流程非常详细）</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv12633102/">2021最全hexo搭建博客+matery美化+使用（保姆级教程）链接1</a></p>
-<hr>
-<h1 id="2-遇到的一些bug及解决方法（下列步骤均指上述文章）"><a href="#2-遇到的一些bug及解决方法（下列步骤均指上述文章）" class="headerlink" title="2.遇到的一些bug及解决方法（下列步骤均指上述文章）"></a>2.遇到的一些bug及解决方法（下列步骤均指上述文章）</h1><h2 id="a-步骤4-2的最后一步，无法通过域名（xxxx-github-io）访问到博客页面，出现如下问题："><a href="#a-步骤4-2的最后一步，无法通过域名（xxxx-github-io）访问到博客页面，出现如下问题：" class="headerlink" title="a.步骤4.2的最后一步，无法通过域名（xxxx.github.io）访问到博客页面，出现如下问题："></a>a.步骤4.2的最后一步，无法通过域名（xxxx.github.io）访问到博客页面，出现如下问题：</h2><p><img src="/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/1.png" srcset="/img/loading.gif" lazyload alt="1"></p>
-<p>这是由于在github上创建仓库时的命名必须是你github的用户名，不能随意其一个名字。否则访问不上。</p>
-<p>参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/dajian790626/article/details/78595684">hexo搭建Github博客上传后，网页显示404问题解决方案</a></p>
-<h3 id="b-在更换主题后，博客页面空白，并出现一串英文"><a href="#b-在更换主题后，博客页面空白，并出现一串英文" class="headerlink" title="b.在更换主题后，博客页面空白，并出现一串英文"></a>b.在更换主题后，博客页面空白，并出现一串英文</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">extends</span> <span class="hljs-keyword">includes</span><span class="hljs-regexp">/layout.pug block content #recent-posts.recent-posts include includes/</span>recent-posts.pug <span class="hljs-keyword">include</span> <span class="hljs-keyword">includes</span>/pagination.pug<br></code></pre></td></tr></table></figure>
-
-<p>解决办法：</p>
-<ul>
-<li>在hexo目录下打开git bash，输入命令：</li>
-</ul>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">npm <span class="hljs-keyword">install </span>--save hexo-renderer-<span class="hljs-keyword">jade </span>hexo-generator-feed hexo-generator-sitemap hexo-<span class="hljs-keyword">browsersync </span>hexo-generator-archive<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>重新上传</li>
-</ul>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo clean</span><br><span class="hljs-attribute">hexo g</span><br><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="c-图片上传不了，出现如下问题："><a href="#c-图片上传不了，出现如下问题：" class="headerlink" title="c.图片上传不了，出现如下问题："></a>c.图片上传不了，出现如下问题：</h3><p><img src="/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/2.jpg" srcset="/img/loading.gif" lazyload alt="2"></p>
-<p>解决方法：</p>
-<p>将<strong>config.yml</strong>文件中的<strong>post_asset_folder</strong> 选项设为  <strong>true</strong> ，这时我们使用</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">hexo <span class="hljs-keyword">new</span> <span class="hljs-string">&quot;xxx&quot;</span>  //hexo <span class="hljs-keyword">new</span> <span class="hljs-symbol">&#x27;hexo</span>&#x27;<br></code></pre></td></tr></table></figure>
-
-<p>可以发现在sourece文件夹的_posts中出现一个 <code>xxx.md</code>和一个同名的文件夹 <code>xxx</code>，将需要插入md文本的图片放在该同名文件夹中，插入图片时，修改图片路径， <strong>注意</strong> ！！！</p>
-<p><strong>只保留文件名，其他一律删除！！！</strong> 如下</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">!<span class="hljs-selector-attr">[图片名称]</span>（图片名称<span class="hljs-selector-class">.png</span>）<br></code></pre></td></tr></table></figure>
-
-<p>参考	<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_60094035/article/details/128769457?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169824469716800222830866%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169824469716800222830866&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-4-128769457-null-null.142%5Ev96%5Epc_search_result_base3&utm_term=Hexo%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87&spm=1018.2226.3001.4187">HEXO博客解决图片无法显示问题</a></p>
-<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders.html">hexo官方文档</a></p>
-<hr>
-<h1 id="使用vscode编辑markdown文件"><a href="#使用vscode编辑markdown文件" class="headerlink" title="使用vscode编辑markdown文件"></a>使用vscode编辑markdown文件</h1><p>可以在vscode中使用**Office Viewer(Markdown Editor)**插件进行编辑（强烈推荐）</p>
-<p>除此之外也可以在命令行输入<strong>Markdown:Open Preview to the Side</strong>打开侧边预览。具体使用方法可以参考以下网页</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/shawWey/p/8931697.html">vscode使用markdown文档编写</a></p>
-
+                
                 
               </div>
             
@@ -321,38 +279,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/hexo/" class="print-no-link">#hexo</a>
-      
-        <a href="/tags/github/" class="print-no-link">#github</a>
-      
-        <a href="/tags/blog/" class="print-no-link">#blog</a>
-      
-    </div>
   
 </div>
 
@@ -362,8 +288,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>hexo的搭建以及bug合集</div>
-      <div>https://collapsarva.github.io/2023/10/25/hexo的搭建以及bug合集/</div>
+      <div>Yolov4算法部署及环境搭建（服务器上）</div>
+      <div>https://collapsarva.github.io/2023/10/27/Yolov4算法部署及环境搭建（服务器上）/</div>
     </div>
     <div class="license-meta">
       
@@ -375,7 +301,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>October 25, 2023</div>
+          <div>October 27, 2023</div>
         </div>
       
       
@@ -407,18 +333,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/27/Yolov4%E7%AE%97%E6%B3%95%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%EF%BC%89/" title="Yolov4算法部署及环境搭建（服务器上）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Yolov4算法部署及环境搭建（服务器上）</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/24/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/10/25/hexo%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8Abug%E5%90%88%E9%9B%86/" title="hexo的搭建以及bug合集">
+                        <span class="hidden-mobile">hexo的搭建以及bug合集</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
