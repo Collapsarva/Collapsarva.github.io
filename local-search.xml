@@ -8,9 +8,23 @@
     <link href="/2023/10/27/Yolov4%E7%AE%97%E6%B3%95%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%EF%BC%89/"/>
     <url>/2023/10/27/Yolov4%E7%AE%97%E6%B3%95%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%EF%BC%89/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>算法网址： <a href="https://github.com/maudzung/Complex-YOLOv4-Pytorch">Yolov4</a></p><h1 id="1-服务器环境部署"><a href="#1-服务器环境部署" class="headerlink" title="1.服务器环境部署"></a>1.服务器环境部署</h1><p>首先建议将kitti数据集下载下来，并且将数据集结构整理如下：</p><p><img src="/2023/10/27/Yolov4%E7%AE%97%E6%B3%95%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%EF%BC%89/1.png" alt="1"></p><p>可以使用scp命令将服务器上的数据集下载下来：</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">scp</span> -r -P <span class="hljs-number">10200</span> user<span class="hljs-variable">@ip</span>:目标文件  安装文件<br></code></pre></td></tr></table></figure><h1 id="2-环境部署"><a href="#2-环境部署" class="headerlink" title="2.环境部署"></a>2.环境部署</h1><p>环境部署比较重要，避免出现一些难以修改的错误。原部署环境如下：</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span>.<span class="hljs-number">6</span><br><span class="hljs-attribute">cuda10</span>.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure><p>如果cuda版本不一致，参考 <a href="https://zhuanlan.zhihu.com/p/581634820?utm_id=0">创建多个cuda版本，可自由切换，不干扰源环境，且不用sudo指令，操作简单</a></p><p>在较高ubuntu版本安装cuda时可能会出现如下bug，这是由于gcc版本不匹配。一般简易解决方法是忽略，使用 –override 参数。</p><p>参考 <a href="https://blog.csdn.net/aizsa111/article/details/129455363">ubuntu22.10安装cuda出错Failed to verify gcc version. See log at &#x2F;var&#x2F;log&#x2F;cuda-installer.log for details.</a></p><p>然后安装相应的依赖包：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pip <span class="hljs-keyword">install</span> -r requirements.txt<br></code></pre></td></tr></table></figure><h1 id="3-部署算法"><a href="#3-部署算法" class="headerlink" title="3.部署算法"></a>3.部署算法</h1><h2 id="a-下载预训练参数，放网盘里"><a href="#a-下载预训练参数，放网盘里" class="headerlink" title="a.下载预训练参数，放网盘里"></a>a.下载预训练参数，放网盘里</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">链接：https:<span class="hljs-regexp">//</span>pan.baidu.com<span class="hljs-regexp">/s/</span><span class="hljs-number">1</span>__b6UxpkoXOZ727bifQefA 提取码：uxx4<br></code></pre></td></tr></table></figure><p>将下载的文件夹放入新建的文件夹（Complex-YOLOv4-Pytorch-master&#x2F;checkpoint&#x2F;complex_yolov4)里</p><p>采用多个GPU训练：</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">python train<span class="hljs-selector-class">.py</span> <span class="hljs-attr">--dist-url</span> <span class="hljs-string">&#x27;tcp://127.0.0.1:29500&#x27;</span> <span class="hljs-attr">--dist-backend</span> <span class="hljs-string">&#x27;nccl&#x27;</span> <span class="hljs-attr">--multiprocessing-distributed</span> <span class="hljs-attr">--world-size</span> <span class="hljs-number">1</span> <span class="hljs-attr">--rank</span> <span class="hljs-number">0</span> <span class="hljs-attr">--pretrained_path</span> ../checkpoints/complex_yolov4/complex_yolov4_mse_loss<span class="hljs-selector-class">.pth</span><br><br></code></pre></td></tr></table></figure><p>主要参考网站：</p><p><a href="https://blog.csdn.net/qq_45275571/article/details/123881921">complex-YOLOv4（三）：测试和评估作者训练好的模型以及训练模型</a></p><p><a href="https://developer.nvidia.com/cuda-toolkit-archive">安装指定的cuda版本</a></p>]]></content>
     
     
+    <categories>
+      
+      <category>学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Yolov4</tag>
+      
+      <tag>blog</tag>
+      
+    </tags>
     
   </entry>
   
@@ -33,11 +47,11 @@
     
     <tags>
       
+      <tag>blog</tag>
+      
       <tag>hexo</tag>
       
       <tag>github</tag>
-      
-      <tag>blog</tag>
       
     </tags>
     
