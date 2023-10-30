@@ -37,9 +37,9 @@
     <category term="学习" scheme="https://collapsarva.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="Yolov4" scheme="https://collapsarva.github.io/tags/Yolov4/"/>
-    
     <category term="blog" scheme="https://collapsarva.github.io/tags/blog/"/>
+    
+    <category term="Yolov4" scheme="https://collapsarva.github.io/tags/Yolov4/"/>
     
   </entry>
   
@@ -63,11 +63,11 @@
     <category term="学习" scheme="https://collapsarva.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="blog" scheme="https://collapsarva.github.io/tags/blog/"/>
-    
     <category term="hexo" scheme="https://collapsarva.github.io/tags/hexo/"/>
     
     <category term="github" scheme="https://collapsarva.github.io/tags/github/"/>
+    
+    <category term="blog" scheme="https://collapsarva.github.io/tags/blog/"/>
     
   </entry>
   
