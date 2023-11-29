@@ -16,15 +16,15 @@
   <meta name="author" content="zzk">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.镜像（image）与容器（container）就我个人的理解，镜像与容器的关系就类似与类与实例的关系。镜像是用来创建容器的，是容器的只读模板。在实际使用中，使用镜像创建容器，容器在linux上本地运行，并与其他容器共享主机的内核。它运行一个独立的进程，占用的内存不超过任何其他可执行文件，体现其轻量级的特点。 2.如何获取镜像获取镜像主要有两种方式，一种是使用他人打包好，并通过网络（主要是doc">
+    <meta name="description" content="Ubuntu上学习使用Docker的详细入门教程 1.镜像（image）与容器（container）就我个人的理解，镜像与容器的关系就类似与类与实例的关系。镜像是用来创建容器的，是容器的只读模板。在实际使用中，使用镜像创建容器，容器在linux上本地运行，并与其他容器共享主机的内核。它运行一个独立的进程，占用的内存不超过任何其他可执行文件，体现其轻量级的特点。 2.获取镜像获取镜像主要有两种方式，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker的学习与使用">
 <meta property="og:url" content="https://collapsarva.github.io/2023/10/30/docker%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="zzk blog">
-<meta property="og:description" content="1.镜像（image）与容器（container）就我个人的理解，镜像与容器的关系就类似与类与实例的关系。镜像是用来创建容器的，是容器的只读模板。在实际使用中，使用镜像创建容器，容器在linux上本地运行，并与其他容器共享主机的内核。它运行一个独立的进程，占用的内存不超过任何其他可执行文件，体现其轻量级的特点。 2.如何获取镜像获取镜像主要有两种方式，一种是使用他人打包好，并通过网络（主要是doc">
+<meta property="og:description" content="Ubuntu上学习使用Docker的详细入门教程 1.镜像（image）与容器（container）就我个人的理解，镜像与容器的关系就类似与类与实例的关系。镜像是用来创建容器的，是容器的只读模板。在实际使用中，使用镜像创建容器，容器在linux上本地运行，并与其他容器共享主机的内核。它运行一个独立的进程，占用的内存不超过任何其他可执行文件，体现其轻量级的特点。 2.获取镜像获取镜像主要有两种方式，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-30T00:39:35.000Z">
-<meta property="article:modified_time" content="2023-11-13T10:20:08.223Z">
+<meta property="article:modified_time" content="2023-11-27T08:19:30.803Z">
 <meta property="article:author" content="zzk">
 <meta property="article:tag" content="blog">
 <meta property="article:tag" content="docker">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          693 words
+          2.4k words
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          6 mins
+          20 mins
         
       </span>
     
@@ -275,8 +275,9 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-镜像（image）与容器（container）"><a href="#1-镜像（image）与容器（container）" class="headerlink" title="1.镜像（image）与容器（container）"></a>1.镜像（image）与容器（container）</h1><p>就我个人的理解，镜像与容器的关系就类似与类与实例的关系。镜像是用来创建容器的，是容器的只读模板。在实际使用中，使用镜像创建容器，容器在linux上本地运行，并与其他容器共享主机的内核。它运行一个独立的进程，占用的内存不超过任何其他可执行文件，体现其轻量级的特点。</p>
-<h1 id="2-如何获取镜像"><a href="#2-如何获取镜像" class="headerlink" title="2.如何获取镜像"></a>2.如何获取镜像</h1><p>获取镜像主要有两种方式，一种是使用他人打包好，并通过网络（主要是docker官方的docker hub和一些类似的镜像托管网站）进行分享的镜像，一种则是在本地将镜像保存为本地文件，直接使用生成的文件进行共享。</p>
+                <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/P_LarT/article/details/107768318">Ubuntu上学习使用Docker的详细入门教程</a></p>
+<h1 id="1-镜像（image）与容器（container）"><a href="#1-镜像（image）与容器（container）" class="headerlink" title="1.镜像（image）与容器（container）"></a>1.镜像（image）与容器（container）</h1><p>就我个人的理解，镜像与容器的关系就类似与类与实例的关系。镜像是用来创建容器的，是容器的只读模板。在实际使用中，使用镜像创建容器，容器在linux上本地运行，并与其他容器共享主机的内核。它运行一个独立的进程，占用的内存不超过任何其他可执行文件，体现其轻量级的特点。</p>
+<h1 id="2-获取镜像"><a href="#2-获取镜像" class="headerlink" title="2.获取镜像"></a>2.获取镜像</h1><p>获取镜像主要有两种方式，一种是使用他人打包好，并通过网络（主要是docker官方的docker hub和一些类似的镜像托管网站）进行分享的镜像，一种则是在本地将镜像保存为本地文件，直接使用生成的文件进行共享。</p>
 <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><p>主要借助两条指令。<code>docker pull</code>和 <code>docker run</code></p>
 <h3 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir">docker pull [<span class="hljs-title class_">OPTIONS</span>] <span class="hljs-title class_">NAME</span>[<span class="hljs-symbol">:TAG|</span><span class="hljs-variable">@DIGEST</span>]<br></code></pre></td></tr></table></figure>
 
@@ -296,6 +297,49 @@
 </li>
 </ul>
 <p>更多详见：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/commandline/pull/#pull-an-image-by-digest-immutable-identifier">https://docs.docker.com/engine/reference/commandline/pull/#pull-an-image-by-digest-immutable-identifier</a></li>
+<li>通过API获取镜像仓库里镜像的标签：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a5af4f558b0a">https://www.jianshu.com/p/a5af4f558b0a</a></li>
+</ul>
+<h3 id="docker-run"><a href="#docker-run" class="headerlink" title="docker run"></a>docker run</h3><p>该指令可以直接拉取本地不存在的镜像，并且创建一个容器。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">sudo docker <span class="hljs-built_in">run</span> hello-<span class="hljs-built_in">word</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><h3 id="docker-load"><a href="#docker-load" class="headerlink" title="docker load"></a>docker load</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">docker <span class="hljs-keyword">load</span> [<span class="hljs-keyword">OPTIONS</span>]<br></code></pre></td></tr></table></figure>
+
+<h2 id="显示镜像"><a href="#显示镜像" class="headerlink" title="显示镜像"></a>显示镜像</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo docker images</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h2><h2 id="生成镜像"><a href="#生成镜像" class="headerlink" title="生成镜像"></a>生成镜像</h2><p>主要包含两种方式，一种是基于构建文件Dockerfile和 <code>docker build</code> 的自动构建，一种是基于 <code>docker commit</code> 提交对于现有容器的修改之后生成镜像。</p>
+<h3 id="docker-build"><a href="#docker-build" class="headerlink" title="docker build"></a>docker build</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">docker build [OPTIONS] PATH |<span class="hljs-string"> URL </span>|<span class="hljs-string"> -</span><br></code></pre></td></tr></table></figure>
+
+<p>细节参考：<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/commandline/build/">https://docs.docker.com/engine/reference/commandline/build/</a></p>
+<p>对于已有的Dockerfile文件，我们可以使用如下指令生成镜像：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">docker build -t vieux/apache:2.0 .</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">使用<span class="hljs-string">&#x27;.&#x27;</span>目录下的Dockerfile文件。注意结尾的路径`.`，这里给打包的镜像指定了TAG</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">docker build -t whenry/fedora-jboss:latest -t whenry/fedora-jboss:v2.1 .</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">也可以指定多个TAG</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">docker build -f dockerfiles/Dockerfile.debug -t myapp_debug .</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">也可以不使用<span class="hljs-string">&#x27;.&#x27;</span>目录下的Dockerfile文件，而是使用-f指定文件</span><br></code></pre></td></tr></table></figure>
+
+<p>这样我们就可以在 <code>docker images</code>中看到生成的镜像了。</p>
+<h3 id="docker-commit"><a href="#docker-commit" class="headerlink" title="docker commit"></a>docker commit</h3><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs inform7">docker commit <span class="hljs-comment">[OPTIONS]</span> <span class="hljs-keyword">CONTAINER</span> <span class="hljs-comment">[REPOSITORY<span class="hljs-comment">[:TAG]</span>]</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+<h1 id="3-使用镜像（创建容器）"><a href="#3-使用镜像（创建容器）" class="headerlink" title="3.使用镜像（创建容器）"></a>3.使用镜像（创建容器）</h1><h2 id="docker-run-1"><a href="#docker-run-1" class="headerlink" title="docker run"></a>docker run</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">docker run <span class="hljs-selector-attr">[OPTIONS]</span> IMAGE <span class="hljs-selector-attr">[COMMAND]</span> <span class="hljs-selector-attr">[ARG...]</span><br><br>例：<br>docker run -it <span class="hljs-attr">--name</span> <span class="hljs-selector-attr">[name]</span> <span class="hljs-attr">--privileged</span>=true <span class="hljs-attr">--network</span> host -v <span class="hljs-selector-attr">[host地址]</span>:<span class="hljs-selector-attr">[容器地址]</span> <span class="hljs-selector-attr">[images]</span> /bin/bash<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>-i和-t：为docker创建一个伪终断</li>
+<li>&#x2F;bin&#x2F;bash: 表示载入容器后运行bash，为docker容器创建一个进程的运行，避免kill itself</li>
+<li><code>-v</code> 表示将本地的文件夹以只读（ <code>:ro</code> ，读写可以写为 <code>:rw</code> ，如果不加，则默认的方式是读写）的方式挂载到容器中的 <code>/tcdata</code> 目录中。</li>
+<li>更多的参数可以参考该网址：<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/run/#detached-vs-foreground">https://docs.docker.com/engine/reference/run/#detached-vs-foreground</a></li>
+</ul>
+<h2 id="查看容器信息"><a href="#查看容器信息" class="headerlink" title="查看容器信息"></a>查看容器信息</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">sudo docker ps -<span class="hljs-selector-tag">a</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> docker start<span class="hljs-meta"> [container]</span><br><span class="hljs-comment">#重启</span><br><span class="hljs-attribute">sudo</span> docker restart<span class="hljs-meta"> [container]</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><p>可以用 <code>attach</code>和 <code>exec</code>进入容器，但是更推荐后者，因为 <code>exec</code>退出后不会把容器关闭</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mel">sudo docker <span class="hljs-keyword">exec</span> -it [<span class="hljs-keyword">container</span>] bash<br></code></pre></td></tr></table></figure>
+
+<h2 id="停止、退出和删除容器"><a href="#停止、退出和删除容器" class="headerlink" title="停止、退出和删除容器"></a>停止、退出和删除容器</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment">#停止容器</span><br>docker stop [container]<br><span class="hljs-comment">#退出容器</span><br><span class="hljs-keyword">exit</span><br><span class="hljs-comment">#删除容器 可以移除一个容器或者多个容器</span><br>docker rm [OPTIONS] CONTAINER [CONTAINER...]<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="从本机与容器中互相拷贝数据"><a href="#从本机与容器中互相拷贝数据" class="headerlink" title="从本机与容器中互相拷贝数据"></a>从本机与容器中互相拷贝数据</h2><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">docker cp <span class="hljs-comment">[OPTIONS]</span> <span class="hljs-keyword">CONTAINER</span>:SRC_PATH DEST_PATH|-<br>docker cp <span class="hljs-comment">[OPTIONS]</span> SRC_PATH|- <span class="hljs-keyword">CONTAINER</span>:DEST_PATH<br></code></pre></td></tr></table></figure>
 
                 
               </div>
