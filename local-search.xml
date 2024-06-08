@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>git及github的学习</title>
+    <link href="/2024/06/09/git%E5%8F%8Agithub%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/06/09/git%E5%8F%8Agithub%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs csharp">git -v<span class="hljs-meta">#查看git版本</span><br><br>git config --<span class="hljs-keyword">global</span> user.name <span class="hljs-string">&quot;name&quot;</span><br>git config --<span class="hljs-keyword">global</span> user.email <span class="hljs-string">&quot;*******@qq.com&quot;</span><br>git <span class="hljs-keyword">init</span><br><span class="hljs-meta">#初始化用户名，邮箱</span><br><br>git <span class="hljs-keyword">add</span> ****.py<span class="hljs-meta">#添加文件</span><br>git <span class="hljs-keyword">add</span> .<span class="hljs-meta">#添加当前路径下的所有文件</span><br>git commit -m <span class="hljs-string">&quot;这次提交版本的名字（修改内容）&quot;</span><span class="hljs-meta">#将这次版本提交上去</span><br><br>git log<span class="hljs-meta">#提交记录</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>blog</tag>
+      
+      <tag>github</tag>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PointRCNN环境搭建及部署</title>
     <link href="/2023/11/12/PointRCNN%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2/"/>
     <url>/2023/11/12/PointRCNN%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2/</url>
